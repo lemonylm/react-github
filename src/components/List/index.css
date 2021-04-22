@@ -1,13 +1,18 @@
 .list-wrap {
   display: flex;
   flex-wrap: wrap;
-
+}
+.list-wrap h2 {
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 .card {
+  height: 200px;
   display: flex;
-  width:20%;
+  width: 20%;
   box-sizing: border-box;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border: 1px solid pink;
 }
@@ -16,6 +21,6 @@
   border-radius: 100px;
 }
 .card p {
-    text-align: center;
+  text-align: center;
   font-size: 85%;
 }

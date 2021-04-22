@@ -3,19 +3,30 @@ import axios from "axios";
 
 import "./index.css";
 export default class Header extends Component {
- 
   search = () => {
     const { value } = this.input;
+    this.props.updateState({
+      isFirst: false,
+      isLoading: true,
+    });
     axios({
       method: "GET",
       url: `https://api.github.com/search/users?q=${value}`,
     }).then(
-        (response)=>{
-            const {items}=response.data
-           this.props.saveUsers(items)
-        },
-        (err)=>{console.log(err)}
-    )
+      (response) => {
+        const { items } = response.data;
+        this.props.updateState({
+          users: items,
+          isLoading: false,
+        });
+      },
+      (err) => {
+        this.props.updateState({
+          isLoading: false,
+          err: err.message,
+        });
+      }
+    );
   };
   render() {
     return (

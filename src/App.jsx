@@ -6,15 +6,18 @@ import List from "./components/List";
 export default class App extends Component {
   state = {
     users: [],
+    isFirst: true,
+    isLoading: false,
+    err: "",
   };
-  saveUsers = (data) => {
-    this.setState({ users: data });
+  updateState = (state) => {
+    this.setState(state);
   };
   render() {
     return (
       <div>
-        <Header saveUsers={this.saveUsers} />
-        <List users={this.state.users}/>
+        <Header updateState={this.updateState} />
+        <List {...this.state} />
       </div>
     );
   }
