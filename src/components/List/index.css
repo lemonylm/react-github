@@ -1,0 +1,21 @@
+.list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.card {
+  display: flex;
+  width:20%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid pink;
+}
+.card img {
+  margin-bottom: 0.75rem;
+  border-radius: 100px;
+}
+.card p {
+    text-align: center;
+  font-size: 85%;
+}

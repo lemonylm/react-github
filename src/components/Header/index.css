@@ -1,0 +1,30 @@
+.search-wrap {
+  background-color: #eee;
+  height: 300px;
+  color: skyblue;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+.search-wrap h1 {
+  text-align: center;
+}
+.inputWrap {
+  width: 500px;
+  margin: 0 auto;
+}
+.inputWrap input {
+  width: 400px;
+  height: 30px;
+  outline: none;
+  border: 1px solid red;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+.inputWrap button{
+    width: 100px;
+    height: 30px;
+    border:1px solid red;
+    background-color: red;
+    color: #fff;
+    outline: none;
+}
